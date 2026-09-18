@@ -10,6 +10,7 @@ import { useWishlist } from "@/context/WishlistContext";
 import { useUI } from "@/context/UIContext";
 import { useAuth } from "@/context/AuthContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 interface MegaMenuSection {
   subcategoriesTitle: string;
@@ -222,15 +223,8 @@ export const Navbar: React.FC = () => {
               <Menu className="w-5 h-5" />
             </button>
 
-            {/* Brand Logo at Start */}
-            <Link href="/" className="inline-block group shrink-0">
-              <span className="font-serif-luxury text-2xl sm:text-3xl lg:text-[32px] tracking-[0.22em] text-[#191411] font-normal uppercase transition-colors group-hover:text-[#9A7B4F]">
-                VELORA
-              </span>
-              <span className="block text-[9px] tracking-[0.45em] text-[#8C7F72] uppercase font-sans-clean -mt-1 font-light">
-                Atelier Milano
-              </span>
-            </Link>
+            {/* Brand Logo with Monogram Crest */}
+            <BrandLogo size="md" />
           </div>
 
           {/* Center: Desktop Main Links (New Arrivals, Best Sellers, Shop by Category, Featured Collection) */}
@@ -455,9 +449,7 @@ export const Navbar: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-[#E8E1D5]">
-                  <span className="font-serif-luxury text-2xl tracking-[0.2em] uppercase text-[#191411]">
-                    VELORA
-                  </span>
+                  <BrandLogo size="sm" />
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-1 text-[#3A322A] hover:text-[#191411]"

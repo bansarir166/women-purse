@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { Product, ProductColor, CartItem } from "@/types";
+import { logAnalyticsEvent } from "@/lib/firebase";
 
 interface CartContextType {
   items: CartItem[];
@@ -86,6 +87,21 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
 
     setIsOpen(true);
+
+    logAnalyticsEvent("add_to_cart", {
+      currency: "USD",
+      value: product.price * quantity,
+      items: [
+        {
+          item_id: product.id,
+          item_name: product.name,
+          item_category: product.category,
+          price: product.price,
+          quantity,
+          item_variant: selectedColor.name,
+        },
+      ],
+    });
   };
 
   const removeItem = (id: string) => {

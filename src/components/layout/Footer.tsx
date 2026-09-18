@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Sparkles, Check, Loader2 } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 
 export const Footer: React.FC = () => {
@@ -47,9 +48,7 @@ export const Footer: React.FC = () => {
         {/* Top Newsletter & Brand Promise Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#2C241E]">
           <div className="lg:col-span-5 space-y-4">
-            <span className="font-serif-luxury text-3xl tracking-[0.25em] uppercase text-[#FBF9F5] block">
-              VELORA
-            </span>
+            <BrandLogo variant="light" size="lg" subtext="Atelier Milano & Firenze" />
             <p className="text-sm font-sans-clean text-[#ADA193] font-light leading-relaxed max-w-md">
               Atelier of quiet luxury, sculpted silhouettes, and master-crafted Italian leather goods. Designed to endure generations, never seasons.
             </p>

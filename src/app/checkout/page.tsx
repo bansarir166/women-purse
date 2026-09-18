@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { Elements } from "@stripe/react-stripe-js";
 import { getStripe, VELORA_STRIPE_APPEARANCE } from "@/lib/stripe";
+import { logAnalyticsEvent } from "@/lib/firebase";
 import StripePaymentElement from "@/components/checkout/StripePaymentElement";
 import { useCart } from "@/context/CartContext";
 import { useAuth } from "@/context/AuthContext";
@@ -207,6 +208,23 @@ function CheckoutContent() {
         orders: [newOrder, ...user.orders],
       });
     }
+
+    // Google Analytics 4 / Firebase Purchase Event
+    logAnalyticsEvent("purchase", {
+      transaction_id: txId,
+      value: currentTotal,
+      currency: "USD",
+      tax: 0,
+      shipping: shippingFee,
+      items: items.map((i) => ({
+        item_id: i.product.id,
+        item_name: i.product.name,
+        item_category: i.product.category,
+        price: i.product.price,
+        quantity: i.quantity,
+        item_variant: i.selectedColor.name,
+      })),
+    });
 
     clearCart();
   };

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" fill="none">
+  <defs>
+    <linearGradient id="veloraGoldGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#DFC399" />
+      <stop offset="35%" stop-color="#C5A880" />
+      <stop offset="70%" stop-color="#9A7B4F" />
+      <stop offset="100%" stop-color="#6F532F" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-10" width="440" height="130" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#191411" flood-opacity="0.05" />
+    </filter>
+  </defs>
+
+  <!-- Crisp Pure White Background Card -->
+  <rect width="100%" height="100%" rx="16" fill="#FFFFFF" stroke="#EAE3D9" stroke-width="1.5" filter="url(#cardShadow)" />
+
+  <!-- Monogram Crest Icon (x: 20..95, y: 15..95) -->
+  <g transform="translate(20, 15)">
+    <!-- White Crest Base Medallion -->
+    <circle cx="40" cy="40" r="38" fill="#FFFFFF" />
+
+    <!-- Outer Octagonal Cartouche Frame -->
+    <path
+      d="M40 6 L68 18 L76 46 L62 72 L40 76 L18 72 L4 46 L12 18 Z"
+      stroke="url(#veloraGoldGrad)"
+      stroke-width="1.5"
+      fill="#FFFFFF"
+      stroke-linejoin="round"
+    />
+    <!-- Inset Frame -->
+    <path
+      d="M40 11 L64 21 L71 46 L59 67 L40 71 L21 67 L9 46 L16 21 Z"
+      stroke="url(#veloraGoldGrad)"
+      stroke-width="0.75"
+      stroke-opacity="0.6"
+      stroke-dasharray="2 2"
+      fill="none"
+    />
+    <!-- Top 4-point Florentine Star Finial -->
+    <path
+      d="M40 16 C40 19 43 20 45 20 C43 20 40 21 40 24 C40 21 37 20 35 20 C37 20 40 19 40 16 Z"
+      fill="url(#veloraGoldGrad)"
+    />
+    <!-- Sculpted 'V' Monogram -->
+    <!-- Outer Heavy V -->
+    <path
+      d="M24 28 L40 62 L56 28 H50 L40 51 L30 28 Z"
+      fill="url(#veloraGoldGrad)"
+    />
+    <!-- Inner Sleek Linear Accent V -->
+    <path
+      d="M33 28 L40 43 L47 28"
+      stroke="url(#veloraGoldGrad)"
+      stroke-width="1.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+    <!-- Bottom Base Knot Accent -->
+    <circle cx="40" cy="65.5" r="1.5" fill="url(#veloraGoldGrad)" />
+  </g>
+
+  <!-- Brand Typographic Wordmark -->
+  <g transform="translate(120, 5)">
+    <text
+      x="0"
+      y="55"
+      font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+      font-size="44"
+      font-weight="400"
+      letter-spacing="0.22em"
+      fill="#191411"
+    >
+      VELORA
+    </text>
+    <text
+      x="2"
+      y="75"
+      font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif"
+      font-size="9.5"
+      font-weight="500"
+      letter-spacing="0.48em"
+      fill="#8C7F72"
+    >
+      ATELIER MILANO
+    </text>
+  </g>
+</svg>

@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { useUI } from "@/context/UIContext";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 function LoginContent() {
   const router = useRouter();
@@ -226,6 +227,9 @@ function LoginContent() {
               
               {/* Header Title */}
               <div className="space-y-1.5">
+                <div className="mb-3">
+                  <BrandLogo size="md" />
+                </div>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#9A7B4F] font-sans-clean font-semibold block">
                   Atelier Client Portal
                 </span>
