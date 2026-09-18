@@ -1,7 +1,6 @@
 import { initializeApp, getApps, getApp, FirebaseApp } from "firebase/app";
 import { getAnalytics, isSupported, Analytics, logEvent } from "firebase/analytics";
 
-// Your web app's Firebase & Google Analytics configuration
 export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "AIzaSyC86PZyYz0H6g8usIogw4rn_p9sDive1WE",
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "purse-da572.firebaseapp.com",
